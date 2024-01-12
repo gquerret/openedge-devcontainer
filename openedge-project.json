@@ -1,0 +1,17 @@
+{
+    "name": "DevContPoc",
+    "version": "1.0",
+    "oeversion": "12.7",
+    "graphicalMode": false,
+    "charset": "utf-8",
+    "buildPath": [
+        { "type": "source", "path": "./src" },
+        { "type": "propath", "path": "${DLC}/tty/OpenEdge.Core.pl" },
+        { "type": "propath", "path": "${DLC}/tty/netlib/OpenEdge.Net.pl" }
+    ],
+    "dbConnections": [
+        //{ "name": "sports2020", "connect": "-db ../../db/sports2020.db -RO", "aliases": [], "dumpFile": "schema/sports2020.df"}
+    ],
+    "buildDirectory": "./bin/weblib",
+    "numThreads": 8
+}
