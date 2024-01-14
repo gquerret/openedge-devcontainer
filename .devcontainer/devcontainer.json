@@ -23,7 +23,8 @@
 				"abl.langServerJavaExecutable": "/opt/java/openjdk/bin/java"
 			},
 			"extensions": [
-				"riversidesoftware.openedge-abl-lsp"
+				"riversidesoftware.openedge-abl-lsp",
+				"ms-azuretools.vscode-docker"
 			]
 		}
 	},
