@@ -29,11 +29,11 @@
 		}
 	},
 	"mounts": [
-		"source=c:/docker/license/oe-12.7/progress-127-all.cfg,target=/usr/dlc/progress.cfg,type=bind,consistency=cached"
-	]
+		"source=${PROCFG127},target=/usr/dlc/progress.cfg,type=bind,consistency=cached"
+	],
 	
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
-	// "forwardPorts": [9000],
+	"forwardPorts": [9995, 9996, 9997, 9998, 9999]
 
 	// Use 'portsAttributes' to set default properties for specific forwarded ports. 
 	// More info: https://containers.dev/implementors/json_reference/#port-attributes
