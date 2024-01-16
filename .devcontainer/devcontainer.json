@@ -29,7 +29,7 @@
 		}
 	},
 	"mounts": [
-		"source=${PROCFG127},target=/usr/dlc/progress.cfg,type=bind,consistency=cached"
+		"source=c:/docker/license/oe-12.7/progress-127-all.cfg,target=/usr/dlc/progress.cfg,type=bind,consistency=cached"
 	],
 	
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
