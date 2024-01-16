@@ -17,6 +17,12 @@ set PROCFG127=c:/temp/progress.cfg
 # or in Linux/Mac bash:
 PROCFG127=/tmp/progress.cfg; export PROCFG127
 ```
+NOTE: above is not working as expected, for now the `mount` is hardcoded in `devcontainer.json`.
+```
+	"mounts": [
+		"source=c:/docker/license/oe-12.7/progress-127-all.cfg,target=/usr/dlc/progress.cfg,type=bind,consistency=cached"
+	],
+```
 
 ## start
 There are two routes to start. 
