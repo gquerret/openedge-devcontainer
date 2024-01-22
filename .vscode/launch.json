@@ -5,6 +5,20 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "Attach to process",
+            "type": "abl",
+            "request": "attach",
+            "hostname": "elegant_lamport",
+            //"mode": "legacy",
+            "port": 3099
+            // "localRoot": "${workspaceFolder}",
+            // "remoteRoot": "${workspaceFolder}",
+            // "sourceMap": {
+            //     "${workspaceFolder}/**": "${workspaceFolder}/**"
+            // }
+            //"preLaunchTask": "abl_debug"
+        },
+        {
             "name": "Debug program / Interactive TTY",
             "type": "abl",
             "request": "launch",
