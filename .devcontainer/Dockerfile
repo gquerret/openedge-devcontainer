@@ -10,3 +10,5 @@ ENV WRKDIR=/usr/wrk
 ENV PATH=$DLC:$DLC/bin:$PATH
 
 # this script is build as docker.io/devbfvio/openedge-devcontainer:12.8.0
+
+CMD [ "bash", "-c", "/app/scripts/startdb.sh" ]

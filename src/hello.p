@@ -3,9 +3,13 @@ var File f = new File("hello.p").
 
 var int i = 0.  // set to 20 for debugging (if that works...)
 
+waitblock:
 do while i > 0:
-    pause 1.
+    message "waited " + string(i) " seconds for debugger attach ...".
+    pause 1 no-message. // Click continue or press f5 to continue debugging
     i -= 1.
+    if debugger:visible then
+        leave waitblock.
 end.
 
 output to /tmp/bla.txt.

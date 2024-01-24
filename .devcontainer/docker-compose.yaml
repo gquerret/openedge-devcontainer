@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+
+  devcontainer:
+    image: docker.io/devbfvio/openedge-devcontainer:12.8.0-rc1
+    volumes:
+      - ../..:/workspaces:cached
+    command: sleep infinity
+  sports2020-db:
+    image: docker.io/devbfvio/sports2020-db:12.8.0
+    volumes:
+      - c:/docker/license/oe-12.8/oe128-db-dev-progress.cfg:/usr/dlc/progress.cfg
+    ports:
+      - 10000-10010:10000-10010
+    environment:
+      - DBNAME=sports2020    

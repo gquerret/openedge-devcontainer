@@ -8,8 +8,8 @@
             "name": "Attach to process",
             "type": "abl",
             "request": "attach",
-            "hostname": "elegant_lamport",
-            //"mode": "legacy",
+            "hostname": "localhost",
+            "mode": "legacy",
             "port": 3099
             // "localRoot": "${workspaceFolder}",
             // "remoteRoot": "${workspaceFolder}",

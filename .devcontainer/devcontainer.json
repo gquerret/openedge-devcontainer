@@ -2,8 +2,14 @@
 // README at: https://github.com/devcontainers/templates/tree/main/src/python
 {
 	"name": "OpenEdge Dev Containers PoC",
+	// Docker compose
+	"dockerComposeFile": "docker-compose.yaml",
+	"service": "devcontainer",
+	"workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-	"image": "docker.io/devbfvio/openedge-devcontainer:12.8.0-rc1",
+	//
+	// Docker only
+	// "image": "docker.io/devbfvio/openedge-devcontainer:12.8.0-rc1",
 	// "build": {
     //     // Path is relative to the devcontainer.json file.
     //     "dockerfile": "Dockerfile"
@@ -34,7 +40,7 @@
 		"source=c:/docker/license/oe-12.8/oe128-db-dev-progress.cfg,target=/usr/dlc/progress.cfg,type=bind,consistency=cached"
 	],
 	"containerEnv": {
-		"PROPATH": "./src"
+		"PROPATH": "./src,./bin"
 	},
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	"forwardPorts": [3099, 9995, 9996, 9997, 9998, 9999],
