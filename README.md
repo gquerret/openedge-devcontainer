@@ -7,22 +7,18 @@ In order for this to work just one extension needs to be installed:
 ![devcontainers extension](./images/extension.png)
 
 ## OpenEdge License
-This particular setup uses OpenEdge 12.7. It's in a Docker container hosted on Docker Hub.
-This is BYOL (bring your own license) and it this you just need a `progress.cfg` with a Linux 4GL Deve system in it.
-Put `progess.cfg` somewhere on your (host) filesystem and set its full path in the `PROCFG127` environment variable:
+This particular setup uses OpenEdge 12.8. It's in a Docker container hosted on Docker Hub.
+This is BYOL (bring your own license) and it this you just need a `progress.cfg` with a Linux 4GL Dev system in it (and whatever the requirement of the containers you add).
+Put `progess.cfg` somewhere on your (host) filesystem:
 
-```
-set PROCFG127=c:/temp/progress.cfg
-
-# or in Linux/Mac bash:
-PROCFG127=/tmp/progress.cfg; export PROCFG127
-```
-NOTE: above is not working as expected, for now the `mount` is hardcoded in `devcontainer.json`.
+For now the `mount` of the license is hardcoded in `devcontainer.json`.
 ```
 	"mounts": [
-		"source=c:/docker/license/oe-12.7/progress-127-all.cfg,target=/usr/dlc/progress.cfg,type=bind,consistency=cached"
+		"source=c:/docker/license/oe-12.8/progress-128-all.cfg,target=/usr/dlc/progress.cfg,type=bind,consistency=cached"
 	],
 ```
+
+Note that is this repo there's a reference to the license file in `.devcontainer/docker-compose.yaml` as well.
 
 ## start
 There are two routes to start. 
@@ -44,4 +40,22 @@ vscode .
 If you wait a few moments this shows up: <br/>
 ![choose option "reopen in container"](./images/start-options1.png)
 
-<more to come>
+## running OpenEdge in the devcontainer
+IN `devcontainer.json` an extra extry have been added:
+```
+"formulahendry.code-runner"
+```
+This manifests itself like:<br/>
+![run button](./images/run-button-vscode.png)
+
+In order for this to work this plugin needs to be set up manually for now. <br/>
+This is done in `settings.json`:
+```
+"code-runner.executorMap": {
+	"abl": "_progres -b -pf db.pf -p ${file}",
+``` 
+and
+```
+"code-runner.languageIdToFileExtensionMap": {
+	"abl": [".p", ".cls"],
+```
