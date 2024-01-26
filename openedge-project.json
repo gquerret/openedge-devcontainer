@@ -10,7 +10,7 @@
         { "type": "propath", "path": "${DLC}/tty/OpenEdge.Core.pl" },
         { "type": "propath", "path": "${DLC}/tty/netlib/OpenEdge.Net.pl" }
     ],
-    "dbConnections": [ { "name": "sports2020", "connect": "-db sports2020 -S 10000 -H sports2020-db"} ],
+    "dbConnections": [ { "name": "sports2020", "connect": "-db sports2020 -S 10000 -H sports2020-db", "dumpFile": "sports2020.df", "aliases": []} ],
     "buildDirectory": "./bin",
     "numThreads": 8
 }
