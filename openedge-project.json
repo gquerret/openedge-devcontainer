@@ -1,7 +1,7 @@
 {
     "name": "DevContPoc",
     "version": "1.0",
-    "oeversion": "ESAP",
+    "oeversion": "12.8",
     "graphicalMode": false,
     "charset": "utf-8",
     "extraParameters": "",
