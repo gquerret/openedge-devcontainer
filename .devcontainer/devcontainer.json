@@ -30,11 +30,14 @@
 				"abl.langServerJavaExecutable": "/opt/java/openjdk/bin/java"
 			},
 			"extensions": [
-				"riversidesoftware.openedge-abl-lsp",
+				"riversidesoftware.openedge-abl-lsp@prerelease",
 				"ms-azuretools.vscode-docker",
 				"formulahendry.code-runner"
 			]
 		}
+	},
+	"features": {
+		"ghcr.io/devcontainers/features/git:1": {}
 	},
 	"mounts": [
 		// "source=c:/docker/license/oe-12.8/oe128-db-dev-progress.cfg,target=/usr/dlc/progress.cfg,type=bind,consistency=cached"
