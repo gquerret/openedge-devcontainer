@@ -23,9 +23,9 @@
 		// Configure properties specific to VS Code.
 		"vscode": {
 			"settings": {
-				"abl.configuration.runtimes.default": "ESAP",
+				"abl.configuration.runtimes.default": "12.8",
 				"abl.configuration.runtimes": [
-					{ "name": "12.8", "path": "/usr/dlc" }
+					{ "name": "12.8", "path": "/opt/progress/dlc" }
 				],
 				"abl.langServerJavaExecutable": "/opt/java/openjdk/bin/java"
 			},
@@ -37,10 +37,10 @@
 		}
 	},
 	"mounts": [
-		"source=c:/docker/license/oe-12.8/oe128-db-dev-progress.cfg,target=/usr/dlc/progress.cfg,type=bind,consistency=cached"
+		// "source=c:/docker/license/oe-12.8/oe128-db-dev-progress.cfg,target=/usr/dlc/progress.cfg,type=bind,consistency=cached"
 	],
 	"containerEnv": {
-		"PROPATH": "./src,./bin"
+		// "PROPATH": "./src,./bin"
 	},
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	"forwardPorts": [ 3099 ],

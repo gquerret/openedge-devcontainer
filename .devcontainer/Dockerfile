@@ -1,4 +1,4 @@
-FROM docker.io/devbfvio/openedge-compiler:12.8.0
+FROM docker.rssw.eu/progress/dlc:12.8
 
 RUN apt-get update && apt-get install -y xz-utils
 RUN apt-get install git -y

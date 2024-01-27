@@ -1,0 +1,35 @@
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Hello",
+      "type": "process",
+      "command": "/opt/progress/dlc/bin/_progres",
+      "args": [
+        "-db",
+        "sports",
+        "-H",
+        "sports2020-db",
+        "-S",
+        "12345",
+        "-p",
+        "hello.p",
+        "-debugReady",
+        "3099"
+      ],
+      "presentation": {
+        "reveal": "silent",
+        "panel": "new",
+        "focus": true
+      },
+      "options": {
+        "env": {
+          "PROPATH": "src:."
+        }
+      },
+      "problemMatcher": []
+    }
+  ]
+}
